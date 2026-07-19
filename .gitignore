@@ -56,3 +56,7 @@ Desktop.ini
 # CC0 Poly Haven replacements documented beside them.
 /assets/textures/concrete/Concrete_Pavement_wjvnbdv_4K_*.jpg
 /assets/textures/concrete/wjvnbdv.json
+
+# Custom local ignore rules
+/AGENTS.md
+/*.zip
