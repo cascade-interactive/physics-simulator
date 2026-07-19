@@ -22,13 +22,7 @@ controller and a simulated world, send it motor commands, and get believable
 sensor data back without needing to risk an actual drone every time I change
 the firmware.
 
-I originally started this for the **Handshake x Codex Challenge** and didn't
-finish it in time. Unlike my flight-controller project, this repository is
-mostly AI-generated. I've been deciding what it should do, testing it, breaking
-it in increasingly strange ways, and pushing it toward the kind of simulator I
-actually need. It has gone quite a bit further than the challenge entry was
-supposed to, and right now it's the main contender for the simulator I'll use
-on my hardware-in-the-loop bench.
+I originally started this for the Handshake x Codex Challenge and did not finish it in time. Most of the implementation code in this repository was generated with AI assistance. I defined the architecture, physics requirements, acceptance criteria, and tests, then iteratively validated, corrected, and extended the implementation into the simulator I actually need for hardware-in-the-loop development.
 
 <div align="center">
   <img src="images/codex_oai_banner.png" alt="Handshake x Codex Challenge" width="800"/>
@@ -42,14 +36,13 @@ solver and environment are doing. The physics runs at a fixed 120 Hz by
 default, separately from rendering, and the update rate and solver settings are
 exposed in the editor.
 
-The part I've been most impressed by is the rotational physics. Fast-spinning
-bodies really do stabilize themselves because angular momentum is part of the
+The strongest part of the current model is the rotational physics. Fast-spinning
+bodies stabilize themselves because angular momentum is part of the
 solver. The drone propellers use that same rotor system, so their inertia,
 spin-up torque, counter-torque on the frame, and gyroscopic effects exist in
-the physics. There aren't hidden reaction wheels or a fake stabilization force
-making it behave.
+the physics.
 
-The drone is still a fairly early model, but it flies. It has four physical
+The drone is still a fairly early model, but it flies. In the future I will try to model it based on the actual drone I have. It has four physical
 thrust points, motor spool time, reaction torque, a mixer, editable cascaded PID
 loops, wind response, optional motor variation, and a follow camera. There is
 also a direct-mixer mode and an external actuator mode so the internal
