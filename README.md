@@ -1,4 +1,20 @@
+<div align="center">
+
+![Language](https://img.shields.io/badge/Language-C%2B%2B17-00599C?style=for-the-badge&logo=cplusplus&logoColor=white)
+![Renderer](https://img.shields.io/badge/Renderer-Vulkan%201.3-AC162C?style=for-the-badge&logo=vulkan&logoColor=white)
+![Build](https://img.shields.io/badge/Build-CMake-064F8C?style=for-the-badge&logo=cmake&logoColor=white)
+![Platform](https://img.shields.io/badge/Platform-Windows-0078D4?style=for-the-badge&logo=windows&logoColor=white)
+![Tests](https://img.shields.io/badge/Tests-7%2F7%20passing-brightgreen?style=for-the-badge)
+![Status](https://img.shields.io/badge/Status-Experimental-orange?style=for-the-badge)
+![License](https://img.shields.io/badge/License-MIT-lightgrey?style=for-the-badge)
+
 # UAView Studio
+
+A physics simulator and Vulkan editor for drone development.
+
+<img src="images/editor.png" alt="UAView Studio editor" width="800"/>
+
+</div>
 
 A physics simulator and Vulkan editor I'm building for drone development. The
 goal is to have something I can eventually put between my real flight
@@ -13,22 +29,6 @@ it in increasingly strange ways, and pushing it toward the kind of simulator I
 actually need. It has gone quite a bit further than the challenge entry was
 supposed to, and right now it's the main contender for the simulator I'll use
 on my hardware-in-the-loop bench.
-
-<!--
-HEADER IMAGE SLOT
-
-Add the editor screenshot at docs/media/editor-header.png, then uncomment:
-
-![UAView Studio editor](docs/media/editor-header.png)
--->
-
-![Language](https://img.shields.io/badge/Language-C%2B%2B17-00599C?logo=cplusplus&logoColor=white)
-![Renderer](https://img.shields.io/badge/Renderer-Vulkan%201.3-AC162C?logo=vulkan&logoColor=white)
-![Build](https://img.shields.io/badge/Build-CMake-064F8C?logo=cmake&logoColor=white)
-![Platform](https://img.shields.io/badge/Platform-Windows-0078D4?logo=windows&logoColor=white)
-![Tests](https://img.shields.io/badge/Tests-7%2F7%20passing-brightgreen)
-![Status](https://img.shields.io/badge/status-experimental-orange)
-![License](https://img.shields.io/badge/License-MIT-lightgrey)
 
 ## Where it's at
 
@@ -84,13 +84,9 @@ instead of faking the effect for the editor. A cube with enough angular
 momentum naturally fights changes to its spin axis, precesses under torque, and
 eventually loses energy through the configured drag and contacts.
 
-<!--
-GYROSCOPIC CUBE GIF SLOT
-
-Add docs/media/gyroscopic-cube.gif, then uncomment:
-
-![Spinning cube showing the gyroscopic effect](docs/media/gyroscopic-cube.gif)
--->
+<div align="center">
+  <img src="images/gyro_spin.gif" alt="Spinning cube showing the gyroscopic effect" width="600"/>
+</div>
 
 ## Drone interaction
 
@@ -99,13 +95,9 @@ force pipeline as every other rigid body. The collider is still coarse, so this
 isn't a propeller-strike or damage model yet, but they can physically collide
 instead of passing through each other.
 
-<!--
-DRONE INTERACTION GIF SLOT
-
-Add docs/media/drone-interaction.gif, then uncomment:
-
-![Two simulated drones interacting](docs/media/drone-interaction.gif)
--->
+<div align="center">
+  <img src="images/annoying_the_drone.gif" alt="Two simulated drones interacting" width="600"/>
+</div>
 
 ## Some numbers
 
