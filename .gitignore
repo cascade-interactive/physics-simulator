@@ -1,0 +1,58 @@
+# CMake and generated build trees
+/build*/
+/out/
+/cmake-build-*/
+/CMakeFiles/
+/CMakeCache.txt
+/cmake_install.cmake
+/CTestTestfile.cmake
+/Testing/
+/_deps/
+compile_commands.json
+
+# Bootstrapped SDKs and local caches
+/.tools/
+/.cache/
+
+# IDE and editor state
+/.vs/
+/.vscode/
+/.idea/
+*.user
+*.suo
+*.VC.db
+*.VC.opendb
+
+# Compiled output
+*.a
+*.dll
+*.dylib
+*.exe
+*.exp
+*.ilk
+*.lib
+*.o
+*.obj
+*.pdb
+*.so
+
+# Runtime/editor state
+imgui.ini
+uaview.log
+*.log
+
+# Local captures and profiling output
+*.cap
+*.pix3
+*.rdc
+
+# OS metadata
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Original user-supplied Megascans maps are retained locally but are not
+# redistributable as standalone source assets. The repository uses the
+# CC0 Poly Haven replacements documented beside them.
+/assets/textures/concrete/Concrete_Pavement_wjvnbdv_4K_*.jpg
+/assets/textures/concrete/wjvnbdv.json

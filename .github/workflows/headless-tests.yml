@@ -1,0 +1,28 @@
+name: Headless physics tests
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  windows-msvc:
+    runs-on: windows-latest
+
+    steps:
+      - name: Check out source
+        uses: actions/checkout@v4
+
+      - name: Configure portable physics build
+        run: >
+          cmake -S . -B build-ci
+          -DUAVIEW_BUILD_STUDIO=OFF
+          -DUAVIEW_BUILD_TESTS=ON
+
+      - name: Build
+        run: cmake --build build-ci --config Release --parallel
+
+      - name: Test
+        run: ctest --test-dir build-ci -C Release --output-on-failure
