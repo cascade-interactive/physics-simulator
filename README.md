@@ -30,6 +30,10 @@ actually need. It has gone quite a bit further than the challenge entry was
 supposed to, and right now it's the main contender for the simulator I'll use
 on my hardware-in-the-loop bench.
 
+<div align="center">
+  <img src="images/codex_oai_banner.png" alt="Handshake x Codex Challenge" width="800"/>
+</div>
+
 ## Where it's at
 
 The editor can spawn cubes and drones into a physical scene, change their
